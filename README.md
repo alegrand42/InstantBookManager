@@ -1,6 +1,6 @@
-#README
+# README
 
-##Instant Book Manager. 
+## Instant Book Manager. 
 This web app stores the first cover of a book with comments and helps the user to find them quickly.
 
 * Ruby version
