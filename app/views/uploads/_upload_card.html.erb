@@ -1,6 +1,15 @@
-<div class="col-lg-3 col-md-4 col-xs-6">
-	<a href="#" class="d-block mb-4 h-100">
-		<%= image_tag upload.image.url , class: 'responsive-img' %>
-	</a>
+<div class="card" style="width: 20rem;">
+	<!--img class="card-img-top" src="..." alt="Card image cap"-->
+	<%= image_tag upload.image.url , class: 'responsive-img' %>
+	<div class="card-block">
+		<h2 class="card-title">Title: <%= upload.title %></h2>
+		<h4 class="card-title">Author: <%= upload.author %></h4>
+		<h4 class="card-title">Editor: <%= upload.editor %></h4>
+		<p class="card-text">Comments: <%= upload.description %> </p>
+		<%= button_to "Libray", library_path,
+		      :class => "inbox-sf-add-btn tip", :method => :get %>
+
+	</div>
 </div>
+
 

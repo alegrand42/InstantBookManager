@@ -4,7 +4,7 @@
 	<div class="row text-center text-lg-left">
 		<% @uploads = Upload.all %>
 		<% @uploads.each do |u| %>
-			<%= render 'upload_card', upload: u %>
+			<%= render 'upload_thumbnail', upload: u %>
 		<% end %>			
 	</div>
 </div>
