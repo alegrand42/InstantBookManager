@@ -37,7 +37,17 @@ class UploadsController < ApplicationController
 	end
 
 	def search
-		@upload = Upload.all
+		#@upload = Upload.all
+		@keyword = ''
+		if params[:search] and /^[\w ]+$/.match(params[:search])
+			@keyword = params[:search]
+		end
+		#@up = Upload.search @keyword, fields: [ :author, :title, :description, :editor] if ENV['ES']
+		@up = Upload.search(title: @keyword).order("created_at DESC")
+		@uploads = []
+		@up.each do |u|
+			@uploads.push(u)
+		end
 	end
 
 	def show

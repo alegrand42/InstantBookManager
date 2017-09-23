@@ -10,6 +10,7 @@ This web app stores the first cover of a book with comments and helps the user t
 `rails 5.1.3`
 
 * System dependencies
+`elasticsearch`
 
 * Database creation
 `rake db:migrate`
@@ -17,4 +18,5 @@ This web app stores the first cover of a book with comments and helps the user t
 
 * Database initialization
 `bundle install`
-
+`service elasticsearch start`
+`rake searchkick:reindex CLASS=Upload`

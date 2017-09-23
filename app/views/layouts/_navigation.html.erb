@@ -5,6 +5,13 @@
 
 <div class="navbar navbar-default navbar-static-top bg-dark" role="navigation">
 	<div class="container">
+		<div>
+			<form class="navbar-search" action=<%= library_path %>>
+				<!--input type="text" class="search-query span3" placeholder="search"-->
+				<input id="search" type="search" name="search" value="<%= @keyword %>" required>
+				<label class="labelbold" for="search"><i class="material-icons">search</i></label>
+			</form>
+		</div>
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>

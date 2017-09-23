@@ -2,7 +2,7 @@
 
 	<h1 class="my-4 text-center text-lg-left">Book Gallery</h1>
 	<div class="row text-center text-lg-left">
-		<% @uploads = Upload.all %>
+		<!--% @uploads = Upload.all %-->
 		<% @uploads.each do |u| %>
 			<%= render 'upload_thumbnail', upload: u %>
 		<% end %>			
