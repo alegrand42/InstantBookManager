@@ -1,5 +1,8 @@
 class Upload < ApplicationRecord
 
+	validates :title, presence: true
+	validates :title, length: {maximum: 100}
+
 	if ENV["ES"]
 		searchkick
 	end

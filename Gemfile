@@ -44,8 +44,12 @@ gem 'jbuilder', '~> 2.5'
 gem "rspec-rails", :group => [:test, :development]
 	group :test do
 	gem "factory_girl_rails"
-	gem "capybara"
+	gem 'capybara', '2.15.1'
 	gem "guard-rspec"
+end
+
+group :test do
+	gem 'database_cleaner', '~> 1.6.1'
 end
 
 group :development do

@@ -67,3 +67,4 @@ bower.json
 
 tmp/*
 /public/*
+Gemfile.lock
