@@ -42,8 +42,11 @@ class UploadsController < ApplicationController
 		if params[:search] and /^[\w ]+$/.match(params[:search])
 			@keyword = params[:search]
 		end
-		#@up = Upload.search @keyword, fields: [ :author, :title, :description, :editor] if ENV['ES']
-		@up = Upload.search(title: @keyword).order("created_at DESC")
+		if ENV['ES']
+			@up = Upload.search @keyword, fields: [ :author, :title, :description, :editor] if ENV['ES']
+		else
+			@up = Upload.search(title: @keyword).order("created_at DESC")
+		end
 		@uploads = []
 		@up.each do |u|
 			@uploads.push(u)
